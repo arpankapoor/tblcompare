@@ -18,10 +18,10 @@ $ cargo build --release
 
 ```console
 $ ./target/release/tblcompare \
-    --leftFile /path/to/leftFile.csv \
-    --rightFile /path/to/rightFile.csv \
-    --keyCols keyCol1 keyCol2 keyCol3 \  # list of columns to identify each row
-    --outFile /path/to/diff.html         # diff is output as an HTML file
+    --left-file /path/to/leftFile.csv \
+    --right-file /path/to/rightFile.csv \
+    --key-cols keyCol1 keyCol2 keyCol3 \  # list of columns to identify each row
+    --out-file /path/to/diff.html         # diff is output as an HTML file
 ```
 
 - see sample output [here](https://arpankapoor.com/tblcompare.sample.html)

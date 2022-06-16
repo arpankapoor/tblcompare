@@ -3,7 +3,7 @@ use std::path::PathBuf;
 
 /// A tabular data comparison utility
 #[derive(Parser)]
-#[clap(rename_all="camel", version=crate_version!())]
+#[clap(version=crate_version!())]
 pub struct Cli {
     /// Key column names separated by spaces
     #[clap(short, long, multiple_values = true, required = true, parse(from_str))]
