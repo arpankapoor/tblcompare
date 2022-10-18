@@ -6,7 +6,7 @@ use std::path::PathBuf;
 #[clap(version=crate_version!())]
 pub struct Cli {
     /// Key column names separated by spaces
-    #[clap(short, long, multiple_values = true, required = true, parse(from_str))]
+    #[clap(short, long, num_args = 1.., required = true)]
     pub key_cols: Vec<String>,
 
     /// Path to first/left file
@@ -18,11 +18,11 @@ pub struct Cli {
     pub right_file: PathBuf,
 
     /// Delimiter used in first/left file
-    #[clap(long, default_value = ",", parse(try_from_str=parse_delim))]
+    #[clap(long, default_value = ",", value_parser(parse_delim))]
     pub left_delim: u8,
 
     /// Delimiter used in second/right file
-    #[clap(long, default_value = ",", parse(try_from_str=parse_delim))]
+    #[clap(long, default_value = ",", value_parser(parse_delim))]
     pub right_delim: u8,
 
     /// Path to output html file

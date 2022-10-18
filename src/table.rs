@@ -255,8 +255,8 @@ pub fn compare_tables(lt: &KeyedTable, rt: &KeyedTable) -> anyhow::Result<Compar
     let [lt_only_indices, mut lt_common_indices, mut rt_common_indices, rt_only_indices] =
         compare_key_cols(lt, rt)?;
 
-    let (mut diff_cell_count, mut match_cell_count) =
-        (0, lt_common_indices.len() * lt.key_columns.len());
+    let mut diff_cell_count = 0;
+    let mut match_cell_count = lt_common_indices.len() * lt.key_columns.len();
 
     let mut tt = {
         let lt_non_key_cols_mmaps = lt.get_cols_mmaps(false)?;
