@@ -13,10 +13,10 @@ use std::cmp::Ordering;
 use std::io;
 use std::path::Path;
 
-pub struct Table(IndexMap<Sym, Column>);
+struct Table(IndexMap<Sym, Column>);
 
 impl Table {
-    pub fn from_csv<P: AsRef<Path>>(
+    fn from_csv<P: AsRef<Path>>(
         path: P,
         delimiter: u8,
         columns_to_read: &[Sym],
@@ -70,7 +70,7 @@ impl Table {
         Ok(tbl)
     }
 
-    pub fn flush(&mut self) -> io::Result<()> {
+    fn flush(&mut self) -> io::Result<()> {
         for col in self.0.values_mut() {
             col.flush()?;
         }
