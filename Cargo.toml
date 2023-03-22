@@ -6,22 +6,22 @@ edition = "2021"
 description = "A tabular data comparison utility"
 
 [dependencies]
-anyhow = "1.0.65"
+anyhow = "1.0.70"
 bitvec = "1.0.1"
-byte-slice-cast = "1.2.1"
-clap = { version = "4.0.16", features = ["cargo", "derive"] }
-csv = "1.1.6"
-env_logger = "0.9.1"
+byte-slice-cast = "1.2.2"
+clap = { version = "4.1.11", features = ["cargo", "derive"] }
+csv = "1.2.1"
+env_logger = "0.10.0"
 #indexmap = { version = "1.8.2", features = ["rayon"] }
-indexmap = "1.9.1"
+indexmap = "1.9.2"
 itertools = "0.10.5"
 log = "0.4.17"
-memmap2 = "0.5.7"
+memmap2 = "0.5.10"
 # rayon = "1.5.3"
 string-interner = "0.14.0"
-tempfile = "3.3.0"
+tempfile = "3.4.0"
 url = "2.3.1"
-webbrowser = "0.8.0"
+webbrowser = "0.8.8"
 
 [profile.release]
 lto = true
