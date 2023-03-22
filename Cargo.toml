@@ -4,6 +4,10 @@ version = "0.1.0"
 authors = ["Arpan Kapoor <a@arpankapoor.com>"]
 edition = "2021"
 description = "A tabular data comparison utility"
+license = "AGPL-3.0"
+homepage = "https://github.com/arpankapoor/tblcompare"
+repository = "https://github.com/arpankapoor/tblcompare"
+readme = "README.md"
 
 [dependencies]
 anyhow = "1.0.70"
